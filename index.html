@@ -6,55 +6,79 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+	<ul class="topbar">
+	  <li class="topbar"><a class="active" href="#home">Home</a></li>
+	  <li class="topbar"><a href="#about">About</a></li>
+	  <li class="topbar"><a href="#assigns">Assignments</a></li>
+	  <li class="topbar"><a href="#contactme">Contact</a></li>
+	  <li class="heading"><img src="./images/heading.jpg"></li>
+	</ul>
+	
+
+	<br>
 	<div id="header">
-		<h1 class="cen"> Web Programming </h1>
+		<div class="cen">
+			<img class="img-circle" src="./images/me.jpg" alt="JK">
+		</div>
+		<p><img src="./images/name.jpg" class="name"></p>
 	</div>
 	<br>
+
 	<div class="cen">
 		<a href="http://www.cs.gsu.edu" class="button button1"> GSU Computer Science Department </a>
 	</div>
+
 	<div id="main">
-		<p>
-			<img src="./me.jpg" alt="JK">
-			<h3> Joshua Katikala </h3>
-			Senior at <span class="sp">Georgia State University</span> pursuing a Bachelors in <span class="sp"> Computer Science </span> with a concentration in Database and Knowledge-based Systems. 
+		<p id="about"> 
+			<h3> About Me </h3>
+			Senior at <span class="sp">Georgia State University</span> pursuing a Bachelors in <span class="sp"> Computer Science </span> with a concentration in Database and Knowledge-based Systems.  
 		</p>
 	</div>
 	<div id="list1">
 		<ul>
-			  <li> Education
+
+			<div id="edu">
+			  <br>
+			  <li>  <span> Education </span>
 			  	<ul>
 			  		<li> <span class="sp"> Georgia State University</span> [2018] </li>
 			  		<li> Duluth High School [2014]</li>
 			  	</ul>
 			  </li>
-			  <li> Job History
+			 </div>
+
+			<div id="job">
+			  <br>
+			  <li> <span> Job History </span>
 			    <ul>
 			    	<li>Drofika Technologies - Intern [2017]</li>
 			    </ul>
 			  </li>
-			  <li> Interests
+			</div>
+
+			<div id="ints">
+			<br>
+			  <li>  <span> Interests </span>
 			  	<ul>
-			  		<li>Music
-			  		   <ul>
-			  		   	  <li><a href="https://hillsong.com/united/" class="button button2">UNITED</a>
-			  		   	  <a href="https://itunes.apple.com/us/album/to-pimp-a-butterfly/id976974313" class="button button2">Kendrick Lamar</a>
-			  		   	  <a href="http://www.vampireweekend.com/" class="button button2">Vampire Weekend</a></li>
-			  		   </ul>
-			  		</li>
+			  		<li>Music</li>
 			  		<li>Basketball</li>
-			  		<li>Documentaries
-			  			<ul>
-			  				<li><a href="https://www.netflix.com/title/80007945" class="button button2">Chef's Table</a>
-			  				<a href="http://channel.nationalgeographic.com/la-92/" class="button button2">LA 92</a></li>
-			  			</ul>
-			  		</li>
+			  		<li>Documentaries</li>
 			  	</ul>
-			  	
 			  </li>
+			</div>
+
 		</ul>
-	</div>
-	<br>
+		</div>
+		<p class="cen">
+			Check out some of my interests:
+			<br>
+			<br>
+			<a href="https://hillsong.com/united/" class="button button2">UNITED</a>
+			<a href="https://itunes.apple.com/us/album/to-pimp-a-butterfly/id976974313" class="button button2">Kendrick Lamar</a>
+			<a href="http://thenbhd.com/" class="button button2">The Neighbourhood</a>
+			<a href="https://www.netflix.com/title/80007945" class="button button2">Chef's Table</a>
+			<a href="http://channel.nationalgeographic.com/la-92/" class="button button2">LA 92</a>
+		</p>
 	<br>
 	<hr>
 	<div id="quote">
@@ -69,7 +93,8 @@
 	</div>
 	<hr>
 
-	<table>
+	<h2 class="cen">Assignments</h2>
+	<table id="assigns">
 		<tr>
 			<th>Title</th>
 			<th>Files</th>
@@ -91,6 +116,10 @@
 			<td><a href="#">files</a></td>
 		</tr>
 	</table>
+
+	<div id="footer">
+		<p id="contactme"> Email: jkatikala1@student.gsu.edu </p>
+	</div>
 
 </body>
 </html>

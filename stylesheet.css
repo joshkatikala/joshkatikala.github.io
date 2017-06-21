@@ -1,22 +1,40 @@
 body {
-	background-image: url(./bi.jpg);
-	margin: 10%;
+	background-image: url(./images/bi.jpg);
+	margin: 0;
 	font-family: "Sans-Serif";
-
+    color: white;
 }
+
+c
+
+li.heading {
+    float: right;
+    display: inline-block;
+    margin-top: 0px;
+    height: 20px;
+}
+
 #header {
-	background-image: url(./hbi.jpg);
-	border: 2px solid #d8d8d8;
+	background-color: #333;
+	border-top: 2px solid #C0C0C0;
+    margin-top: 28px;
+    margin-bottom: 0px;
+    height: 520px;
+    text-align: center;
+    overflow: auto;
 }
 
-img {
-	border-radius: 8px;
-	margin-left: 0px;
-	max-width: 30%;
-	height: 350px;
-	float: left;
+.img-circle {
+	border-radius: 70%;
+	max-width: 40%;
+	height: 400px;
+    margin-top: 20px;
 }
 
+.name {
+    margin-top: 0px;
+    height: 45px;
+}
 .sp {
     color: red;
     font-weight: bold; 
@@ -44,7 +62,7 @@ img {
 
 .button1 {
     background-color: transparent; 
-    color: black; 
+    color: white; 
     border: 2px solid #2A5DB0;
 }
 
@@ -55,10 +73,10 @@ img {
 
 .button2 {
 	background-color: transparent; 
-    color: black; 
-    width: 90px;
+    color: white; 
+    width: 120px;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     border: 2px solid #2A5DB0;
 }
 
@@ -74,15 +92,53 @@ img {
 	text-align: center;
 }
 
+#edu {
+    background-color: #202020;
+    height: 120px;
+}
+
+#job {
+    background-color: #505050;
+    height: 120px;
+}
+
+#ints {
+    background-color: #202020;
+    height: 130px;
+}
+
 #list1 {
-	padding-left: 20px;
- 	display: inline-block;
- 	width: 50%;
+    background-color: #505050;
+ 	width: 100%;
+}
+
+#list1 ul {
+    font-size: 22px;
+}
+
+#list1 ul li { 
+
+}
+#list1 ul li ul { 
+    list-style-image: url("./images/nest.jpg"); 
+    padding:5px 0 5px 18px; 
+    font-size:17px; 
+}
+#list1 ul li ul li { 
+
+    height:17px; 
+    margin-left:10px; 
+}
+
+li span:not(.sp) { 
+    position: relative; 
+    left: 10px; 
 }
 
 #quote {
 	text-align: center;
 	font-style: italic;
+    font-size: 18px;
 }
 
 table{
@@ -94,11 +150,22 @@ table{
 
 th, td {
     text-align: left;
-    padding: 8px;
+    padding: 18px;
 }
 
 tr:nth-child(even){
- 	background-color: #CCFFFF;
+ 	background-color: #505050;
+ }
+
+ #footer {
+    background-color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 60px;
  }
 
 
