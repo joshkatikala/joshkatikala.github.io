@@ -1,5 +1,5 @@
 body {
-    background-image: url(./images/bi.jpg);
+    background-image: url(./bi.jpg);
     margin: 0;
     font-family: "Sans-Serif";
     color: white;
@@ -149,7 +149,7 @@ li.heading {
 
 }
 #list1 ul li ul { 
-    list-style-image: url("./images/nest.jpg"); 
+    list-style-image: url("./nest.jpg"); 
     padding:5px 0 5px 18px; 
     font-size:17px; 
 }
