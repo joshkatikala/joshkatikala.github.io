@@ -1,0 +1,400 @@
+@import "compass/css3";
+
+body{
+  counter-reset:balls;
+  overflow: hidden;
+}
+
+body.b{
+    overflow: hidden;    
+    -webkit-animation: b 8s infinite;
+    animation: b 8s infinite;
+}
+
+@keyframes b{
+  0% {background:#29ADF0;}
+  20%{background:#F02999;}
+  40%{background:#F06E29;}
+  60%{background:#F0D829;}
+  80%{background:#29F03A;}
+  100%{background:#29ADF0;}
+}
+
+@-webkit-keyframes b{
+  0% {background:#29ADF0;}
+  20%{background:#F02999;}
+  40%{background:#F06E29;}
+  60%{background:#F0D829;}
+  80%{background:#29F03A;}
+  100%{background:#29ADF0;}
+}
+
+.header {
+  background-color: #e6e8fa;
+  width: 100%;
+}
+
+#game {
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+input{
+  position:fixed; 
+  left:-10px; 
+  top:-10px;
+}
+
+h1{
+  margin:0; 
+  text-align:center;
+  font-family: "Century Gothic", "Serif";
+}
+
+
+h3 {
+  text-align: center;
+  font-family: "Century Gothic", "Serif";
+}
+
+
+.container{  
+  height:500px;
+  position:relative;
+  cursor:crosshair;
+}
+
+.input-ball:checked{
+  counter-increment:balls;
+}
+
+.sum{
+  position:fixed; 
+  top:60px; 
+  font-size:24px; 
+  font-weight:bold;
+  font-family: "Century Gothic", "Serif";
+}
+
+
+.sum:after{
+  content: counter(balls);
+}
+
+.coolfont {
+  color:#313131;
+  font-size:35px;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  -webkit-animation:colorchange 20s infinite alternate;
+}
+
+ @-webkit-keyframes colorchange {
+  0% {color: blue;}
+  10% {color: #8e44ad;}
+  20% {color: #1abc9c;}
+  30% {color: #d35400;}
+  40% {color: blue;}
+  50% {color: #34495e;}
+  60% {color: blue;}
+  70% {color: #2980b9;}
+  80% {color: #f1c40f;}
+  90% {color: #2980b9;}
+  100% {color: pink;}
+}
+
+.input-ball ~ .ball{
+  opacity:0;
+  transition:0.3s  cubic-bezier(0,.43,1,0);
+  animation: move 8s infinite alternate;
+}
+
+.input-ball1:not(:checked) ~ .ball1,
+.input-ball2:not(:checked) ~ .ball2,
+.input-ball3:not(:checked) ~ .ball3,
+.input-ball4:not(:checked) ~ .ball4,
+.input-ball5:not(:checked) ~ .ball5,
+.input-ball6:not(:checked) ~ .ball6,
+.input-ball7:not(:checked) ~ .ball7,
+.input-ball8:not(:checked) ~ .ball8,
+.input-ball9:not(:checked) ~ .ball9,
+.input-ball10:not(:checked) ~ .ball10,
+.input-ball11:not(:checked) ~ .ball11
+{
+  opacity:1; 
+}
+
+
+.input-ball1:checked ~ .ball1 span,
+.input-ball2:checked ~ .ball2 span,
+.input-ball3:checked ~ .ball3 span,
+.input-ball4:checked ~ .ball4 span,
+.input-ball5:checked ~ .ball5 span,
+.input-ball6:checked ~ .ball6 span,
+.input-ball7:checked ~ .ball7 span,
+.input-ball8:checked ~ .ball8 span,
+.input-ball9:checked ~ .ball9 span,
+.input-ball10:checked ~ .ball10 span,
+.input-ball11:checked ~ .ball11 span
+{
+  display:block;  
+}
+
+.ball{   
+  position:absolute;
+  left:0;  
+  cursor:crosshair;
+}
+
+.ball>span{
+  display:none;
+  position:absolute; 
+  z-index:2; 
+  left:-250%;
+  bottom:-50%;  
+  border:solid 2px #000; 
+  width:80px; 
+  height:30px; 
+  padding:10px; 
+  border-radius:50%;
+}
+
+.ball>span:before{
+  content:"Ayee"; 
+  color:red; 
+  font-weight:bold;
+}
+
+.ball1{
+  top:50px;
+  animation-delay: -2s!important;
+  transform:scale(0.9);
+}
+
+.ball2{
+  top:100px;
+  animation-delay: -5s!important;
+  transform:scale(0.5); 
+}
+
+.ball3{
+  top:200px;
+  animation-delay: -3s!important;
+  transform:scale(1.4); 
+}
+
+.ball4{
+  top:50px;
+  animation-delay: -22s!important;
+  transform:scale(0.9);
+}
+
+.ball5{
+  top:100px;
+  animation-delay: -17s!important;
+  transform:scale(0.5); 
+}
+.ball6{
+  top:200px;
+  animation-delay: -20s!important;
+  transform:scale(1.4); 
+}
+
+.ball7{
+  top:200px;
+  animation-delay: -24s!important;
+  transform:scale(1.9); 
+}
+
+.ball8{
+  top:200px;
+  animation-delay: -28s!important;
+  transform:scale(1.5); 
+}
+
+.ball9{
+  top:200px;
+  animation-delay: -32s!important;
+  transform:scale(0.4); 
+}
+
+.ball10{
+  top:200px;
+  animation-delay: -11s!important;
+  transform:scale(0.1); 
+}
+
+.ball11{
+  top:200px;
+  animation-delay: -10s!important;
+  transform:scale(1.5); 
+}
+
+@keyframes move{
+  0%{left:0%;}
+  20%{left:20%;top:50%; }
+  40%{top:30%; left:60%;}
+  60%{top:80%;left:80%;}
+  80%{top:10%; left:20%:}
+  100%{top:30%; left:20%; }
+}
+
+
+.timer {
+    background: -webkit-linear-gradient(left, #333 50%, #eee 50%); 
+    margin-top: 10px;
+    border-radius: 100%;
+    height: 100px; 
+    position: relative;
+    width: 100px; 
+    -webkit-animation: time 40s steps(20, start) infinite; 
+}
+.hide {
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    -webkit-animation: hide 40s steps(10, start) infinite; 
+    -webkit-transform-origin: 100% 50%;
+}
+@-webkit-keyframes time {
+    100% { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes hide {
+    0% {
+        background: #eee; 
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        background: #eee; 
+        -webkit-transform: rotate(-180deg);
+    }
+    50.01% {
+        background: #333;
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        background: #333; 
+        -webkit-transform: rotate(-180deg);
+    }
+}
+
+.endgame{
+  position:fixed; 
+  z-index:100000; 
+  left:0; 
+  top:0; 
+  bottom:0; 
+  right:0; 
+  background-color:rgba(0,0,0,0.8);
+  animation:endgame 40s linear forwards;
+  font-size:80px; 
+  color:white; 
+  font-weight:bold; 
+  text-align:center; 
+  font-family: "Century Gothic", "Serif";
+  text-indent:0;  
+  line-height:500px;
+}
+
+@keyframes endgame{
+0%{
+  top:-5000px;
+  bottom:100%;
+}
+97%{
+  top:-1000px;
+  bottom:100%;
+}
+100%{ 
+  top:0px;}
+}
+
+footer {
+  position:fixed; 
+  text-align: center;
+  float: left;
+  bottom:0;
+  font-size:18px; 
+  font-style: italic;
+  color:purple;
+  font-family: "Century Gothic", "Serif";
+}
+
+
+.ball{
+  background:black;
+  border-radius: 50%;
+  line-height:20px;
+  letter-spacing: 2px;
+  font-size:0.8em;
+  text-align:center;
+  position:absolute;
+ 
+  margin-top:-20px; 
+  margin-left:-10px;
+  width:85px; 
+  height:85px;
+  animation:movement 0.8s linear infinite;
+  z-index:999;
+}
+
+.blue {
+  background: blue;
+}
+
+.pink {
+  background: pink;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.red {
+  background: red;
+}
+
+.orange {
+  background: orange;
+}
+
+.green {
+  background: green;
+}
+
+.magenta {
+  background: #dda0dd;
+}
+
+.turq {
+  background: #40e0d0;
+}
+
+.violet {
+  background: #8a2be2;
+}
+
+.ball:after,
+.ball:before{
+  content:"";
+  position: absolute;
+  top:50%; 
+  left:50%;
+}
+
+@keyframes movement {
+  40%{
+    transform:rotateZ(2deg) translateX(6px) translateY(10px) translateZ(0);
+    line-height:16px;
+    font-size:0.6em;
+  }
+  80%{
+    transform:rotateZ(-2deg) translateX(5px) translateY(8px) translateZ(0);
+  }
+}
